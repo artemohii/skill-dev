@@ -1,0 +1,162 @@
+/* .main-screen {
+} */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 155px;
+
+
+		// .header__logo
+
+		/* &__logo {
+		} */
+
+		// .header__button
+
+		&__button {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+		}
+}
+.header-nav {
+
+		// .header-nav__ul
+
+		&__ul {
+            display: flex;
+            gap: 73px;
+		}
+
+		// .header-nav__li
+    /*  &__li {
+
+        } */
+		&__li:first-of-type a {
+            font-weight: 700;
+
+
+		}
+
+		// .header-nav__a
+
+		&__a {
+            @include text ($font,600,19.8px,15px,$color-gray);
+            transition: $transition;
+
+		}
+        &__a:hover {
+            font-weight: 700;
+		}
+}
+.signIn {
+    @include text ($font,600,19px,15px,$color-gray);
+}
+//.freeTrial {}
+.main-screen {
+    margin-bottom: 70px;
+
+    // .main-screen__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+        gap: 97px;
+        @include desktop-small {
+            flex-direction: column-reverse;
+            gap: 54px;
+        } 
+    
+    }
+
+    // .main-screen__info
+
+    &__info {
+        max-width: 612px;
+    }
+
+    // .main-screen__title
+
+    &__title {
+    @include text ($font,700,63px,83px,$color-title);
+    margin-bottom: 32px;
+    }
+
+    // .main-screen__desc
+
+    &__desc {
+        @include text ($font,600,18px,30px,$color-gray-2);
+        margin-bottom: 50px;
+    }
+
+    // .main-screen__button
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        }
+    &__avatar {
+        max-width: 700px;
+    }
+    &__img img{
+        max-width: 100%;
+
+    }
+
+    // .main-screen__allCourses
+
+    &__allCourses {
+    }
+    &__play {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+    }
+    &__play-img {
+        width: 60px;
+        height: 60px;
+        background: $color-white;  
+        border-radius: 50%; 
+        position: relative;    
+
+    }
+    
+    
+    &__play img {
+        position: absolute;
+        top: 20px;
+        left: calc(50% - 6px);
+    }
+    // .main-screen__playVideo
+
+    &__playVideo {
+        @include text ($font,600,19px,15px,$color-gray-2);
+        
+
+    }
+    /* &__playVideo::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: calc(50% - 33px);
+        width: 66px;
+        height: 66px;
+        //border-radius: 50%;
+        border: 1px solid red;
+        background: url(../../../img/logo.svg) center no-repeat;
+        background-size: cover;
+    } */
+
+    // .main-screen__avatar
+
+    &__avatar {
+    }
+
+    // .main-screen__img
+
+    &__img img{
+    }
+}

@@ -1,0 +1,303 @@
+.main {
+    margin-bottom: 85px;
+
+    // .main__trusted
+
+    &__trusted {
+        display: flex;
+        align-items: center;
+        gap: 154px;
+        margin-bottom: 184px;        
+        
+        @include desktop-small {
+            flex-direction: column;
+            gap: 54px;
+        } 
+    }
+
+    // .main__trusted-title
+
+    &__trusted-title {
+    @include text ($font,700,36px,50px,$color-gray);
+    cursor: default;
+    }
+
+    // .main__trusted-logo
+
+    &__trusted-logo {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    // .main__trusted-item1
+
+    &__trusted-item1 {
+    }
+
+    // .main__trusted-item2
+
+    &__trusted-item2 {
+
+    }
+
+    // .main__trusted-item3
+
+    &__trusted-item3 {
+
+    }
+
+    // .main__trusted-item4
+
+    &__trusted-item4 img{
+        
+    }
+}
+.item {
+    width: 190px;
+    height: 60px;
+    cursor: pointer;
+
+
+}
+.item img {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+/* steps */
+.steps {
+    margin-bottom: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+
+&__bg-line {
+    position: absolute;
+    top: 0;
+    height: 500px;
+    width: 500px;
+    background: url(/HW/onlineSkillDev/img/line2.svg) center no-repeat;
+    background-size: cover;
+
+}
+    // .steps__cards
+
+    &__cards {
+        z-index: 2;
+        padding: 70px 0 0 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        cursor: pointer;
+
+    }
+
+    // .steps__card
+
+    &__card {
+        transition: $transition;
+        padding: 50px 23px;
+        width: 255px;
+        height: 255px;
+        text-align: center;
+        background: $color-white;
+        box-shadow: 5px 5px 100px rgba(87, 88, 89, 0.1);
+        border-radius: 10px;
+    }
+    &__card:hover {
+        background: $color-green;
+    }
+    &__card:hover &__name {
+        color: $color-white;
+    }
+    &__card:hover &__number {
+        background: $color-white;
+        color: $color-black;
+    }
+
+
+    // .steps__number
+
+    &__number {
+        margin: 0 auto;
+        width: 74px;
+        height: 74px;
+        background: $color-green;
+        border-radius: 50%;
+        @include text ($font,700,30px,25px,$color-white);
+        padding: 24px;
+        margin-bottom: 30px;
+    }
+
+    // .steps__name
+
+    &__name {
+    @include text ($font,600,28px,15px,$color-title);
+    }
+    
+    .transform {
+        transform: translateY(30px);
+    }
+    // .steps__info
+
+    &__info {
+        cursor: default;
+        max-width: 611px;
+        
+    }
+
+    // .steps__title
+
+    &__title {
+        @include text ($font,700,58px,74px,$color-title);
+        margin-bottom: 30px;
+    }
+
+    // .steps__desc
+
+    &__desc {
+        @include text ($font,400,18px,30px,#8C8E91);
+        margin-bottom: 50px;
+    }
+
+
+
+    
+    // .steps__btn
+
+    &__btn {
+        @include text ($font,600,20px,32px,$color-title);
+        text-decoration-line: underline;
+    }
+    &__btn a {
+        position: relative;
+        padding-left: 76px;
+    }
+    &__btn a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -35px;
+        width: 58px;
+        height: 80px;
+        background: url(/HW/onlineSkillDev/img/play2.png) center no-repeat;
+    }
+}
+/* popular */
+.popular {
+
+    // .popular__title
+
+    &__title {
+        @include text ($font,700,58px,74px,$color-title);
+        margin-bottom: 133px;
+    }
+
+    // .popular__items
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    // .popular__item
+
+    &__item {
+        background: #FFFFFF;
+        border: 1px solid #F2EFEF;
+        box-shadow: 0px 20px 100px rgba(87, 88, 89, 0.1);
+        border-radius: 15px;
+        padding: 0 30px 30px 30px;
+    }
+
+    // .popular__avatar
+    &__avatar {
+        margin-bottom: 30px;
+
+    }
+    &__avatar img{
+        border-radius: 15px 15px 0 0;
+
+        
+    }
+
+    // .popular__designation
+
+    &__designation {
+        @include text ($font,600,30px,40px,$color-title);
+        margin-bottom: 30px;
+
+    }
+
+    // .popular__desc
+
+    &__desc {
+        margin-bottom: 21px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    // .popular__lectures
+
+    &__lectures {
+        @include text ($font,600,20px,15px,$color-gray);
+    }
+
+    // .popular__learners
+
+    &__learners {
+        @include text ($font,600,18px,22px,$color-gray);
+    }
+
+    // .popular__man
+
+    &__man {
+        display: flex;
+    }
+
+    // .popular__photo
+
+    &__photo {
+        
+    }
+    
+
+    // .popular__profile
+
+    &__profile {
+    }
+
+    // .popular__name
+
+    &__name {
+    }
+
+    // .popular__view
+
+    &__view {
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .popular__price
+
+    &__price {
+        @include text ($font,700,34px,15px,#4C68FF);
+    }
+}
+hr {
+    margin: 21px auto;
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid rgba(38, 142, 170, 0.5);
+
+}
