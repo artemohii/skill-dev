@@ -1,0 +1,53 @@
+.footer {
+    background: url(../img/footer.svg) center no-repeat;
+    background-size: cover;
+    padding: 100px 265px;
+    @include tablet {
+        padding: 20px;
+        }
+        
+
+    // .footer__title
+
+    &__title {
+        @include text ($font,700,58px,68px,$color-white);
+        text-align: center;
+        cursor: default;
+        margin-bottom: 50px;
+        @include tablet-small {
+        }
+        @include mobile {
+            font-size: 15px;
+            margin-bottom: 0;
+            line-height: 34px;
+            }
+    }
+
+    // .footer__btns
+
+    &__btns {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        @include mobile {
+            flex-direction: column;
+
+            text-align: center;
+            }
+    }
+
+    // .footer__btn
+
+    &__btn-1 {
+        padding: 20px 31px;
+        background: transparent;
+        color: $color-white;
+        border: 1px solid $color-white;
+    }
+    &__btn-2 {
+        background: $color-white;
+        color: $color-black;
+        padding: 20px 37px;
+    }
+}
+

@@ -1,4 +1,3 @@
-/* 
 function navToggle() {
     var navToggleNav = document.getElementById("nav");
     var html = document.getElementById("html");
@@ -8,6 +7,7 @@ function navToggle() {
     body.classList.toggle("_overflow");
 
 }
+/* 
 
 // Нашли все заголовки табов по data атрибуту
 const tabHeaders = document.querySelectorAll('[data-tab]');

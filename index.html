@@ -13,7 +13,7 @@
 
     <title>Skill Dev</title>
 </head>
-<body>
+<body id="body">
     <div class="bg-color">
         <div class="container">
             <div class="main-screen">
@@ -21,6 +21,12 @@
                     <a href="#" class="header__logo">
                         <img src="./img/logo.svg" alt="logo">
                     </a>
+                    
+                    <div class="header__burger">
+                        <span id="icon-menu" onclick="navToggle()" class="material-icons _active">
+                            menu
+                            </span>  
+                    </div>
                     <nav id="nav" class="header-nav" >
                         <ul class="header-nav__ul">
                             <li class="header-nav__li">
@@ -36,9 +42,9 @@
                                 <a href="#part3" class="header-nav__a">Blog</a>
                             </li>
                         </ul>
-                        <!-- <span id="icon-close" onclick="navToggle()" class="material-icons">
+                        <span id="icon-close" onclick="navToggle()" class="material-icons">
                             close
-                            </span> -->
+                            </span>
                     </nav>
                     <div class="header__button">
                         <a href="#" class="signIn">Sign in</a>
@@ -87,16 +93,12 @@
                 
                 <div class="main__trusted-logo">
                     <div class="main__trusted-item1 item">
-                        <img src="./img/company/udemy-logo.svg" alt="company">
                     </div>
                     <div class="main__trusted-item2 item">
-                        <img src="./img/company/microsoft.svg" alt="company">
                     </div>
                     <div class="main__trusted-item3 item">
-                        <img src="./img/company/by.svg" alt="company">
                     </div>
                     <div class="main__trusted-item4 item">
-                        <img src="./img/company/ашмукк.svg" alt="company">
                     </div>
                 </div>
             </div>
@@ -140,9 +142,9 @@
                     <div class="popular__item">
                         <div class="popular__avatar">
                             <img src="./img/courses/cours1.svg" alt="">
-
                         </div>
-                        <div class="popular__designation">Modern Business|Best Online Courses</div>
+                        <div class="popular__padding">
+                            <div class="popular__designation">Modern Business|Best Online Courses</div>
                         <div class="popular__desc">
                             <div class="popular__lectures">30 Lectures</div>
                             <div class="popular__learners">12k+Learners</div>
@@ -159,99 +161,180 @@
                             </div>
                             <div class="popular__price">$100</div>
                         </div>
+                        </div>
+                    </div>
+                    <div class="popular__item transform-b">
+                        <div class="popular__avatar">
+                            <img src="./img/courses/cours1.svg" alt="">
+                        </div>
+                        <div class="popular__padding">
+                            <div class="popular__designation">Modern Business|Best Online Courses</div>
+                        <div class="popular__desc">
+                            <div class="popular__lectures">30 Lectures</div>
+                            <div class="popular__learners">12k+Learners</div>
+                        </div>
+                        <hr>
+                        <div class="popular__bottom">
+                            <div class="popular__man">
+                                <div class="popular__photo">
+                                </div>
+                                <div class="popular__profile">
+                                    <div class="popular__name">Jhon Smith</div>
+                                    <div class="popular__view">View Profile</div>
+                                </div>
+                            </div>
+                            <div class="popular__price">$100</div>
+                        </div>
+                        </div>
                     </div>
                     <div class="popular__item">
                         <div class="popular__avatar">
                             <img src="./img/courses/cours1.svg" alt="">
                         </div>
-                        <div class="popular__designation">Modern Business|Best Online Courses</div>
+                        <div class="popular__padding">
+                            <div class="popular__designation">Modern Business|Best Online Courses</div>
                         <div class="popular__desc">
                             <div class="popular__lectures">30 Lectures</div>
                             <div class="popular__learners">12k+Learners</div>
                         </div>
                         <hr>
-                        <div class="popular__man">
-                            <div class="popular__photo"></div>
-                            <div class="popular__profile">
-                                <div class="popular__name">Jhon Smith</div>
-                                <div class="popular__view">View Profile</div>
+                        <div class="popular__bottom">
+                            <div class="popular__man">
+                                <div class="popular__photo">
+                                </div>
+                                <div class="popular__profile">
+                                    <div class="popular__name">Jhon Smith</div>
+                                    <div class="popular__view">View Profile</div>
+                                </div>
                             </div>
-
+                            <div class="popular__price">$100</div>
                         </div>
-                        <div class="popular__price">$100</div>
-                    </div><div class="popular__item">
-                        <div class="popular__avatar"></div>
-                        <div class="popular__designation">Modern Business|Best Online Courses</div>
-                        <div class="popular__desc">
-                            <div class="popular__lectures">30 Lectures</div>
-                            <div class="popular__learners">12k+Learners</div>
                         </div>
-                        <hr>
-                        <div class="popular__man">
-                            <div class="popular__photo"></div>
-                            <div class="popular__profile">
-                                <div class="popular__name">Jhon Smith</div>
-                                <div class="popular__view">View Profile</div>
-                            </div>
-
-                        </div>
-                        <div class="popular__price">$100</div>
-                    </div><div class="popular__item">
-                        <div class="popular__avatar"></div>
-                        <div class="popular__designation">Modern Business|Best Online Courses</div>
-                        <div class="popular__desc">
-                            <div class="popular__lectures">30 Lectures</div>
-                            <div class="popular__learners">12k+Learners</div>
-                        </div>
-                        <hr>
-                        <div class="popular__man">
-                            <div class="popular__photo"></div>
-                            <div class="popular__profile">
-                                <div class="popular__name">Jhon Smith</div>
-                                <div class="popular__view">View Profile</div>
-                            </div>
-
-                        </div>
-                        <div class="popular__price">$100</div>
-                    </div><div class="popular__item">
-                        <div class="popular__avatar"></div>
-                        <div class="popular__designation">Modern Business|Best Online Courses</div>
-                        <div class="popular__desc">
-                            <div class="popular__lectures">30 Lectures</div>
-                            <div class="popular__learners">12k+Learners</div>
-                        </div>
-                        <hr>
-                        <div class="popular__man">
-                            <div class="popular__photo"></div>
-                            <div class="popular__profile">
-                                <div class="popular__name">Jhon Smith</div>
-                                <div class="popular__view">View Profile</div>
-                            </div>
-
-                        </div>
-                        <div class="popular__price">$100</div>
-                    </div><div class="popular__item">
-                        <div class="popular__avatar"></div>
-                        <div class="popular__designation">Modern Business|Best Online Courses</div>
-                        <div class="popular__desc">
-                            <div class="popular__lectures">30 Lectures</div>
-                            <div class="popular__learners">12k+Learners</div>
-                        </div>
-                        <hr>
-                        <div class="popular__man">
-                            <div class="popular__photo"></div>
-                            <div class="popular__profile">
-                                <div class="popular__name">Jhon Smith</div>
-                                <div class="popular__view">View Profile</div>
-                            </div>
-
-                        </div>
-                        <div class="popular__price">$100</div>
                     </div>
+                    <div class="popular__item">
+                        <div class="popular__avatar">
+                            <img src="./img/courses/cours1.svg" alt="">
+                        </div>
+                        <div class="popular__padding">
+                            <div class="popular__designation">Modern Business|Best Online Courses</div>
+                        <div class="popular__desc">
+                            <div class="popular__lectures">30 Lectures</div>
+                            <div class="popular__learners">12k+Learners</div>
+                        </div>
+                        <hr>
+                        <div class="popular__bottom">
+                            <div class="popular__man">
+                                <div class="popular__photo">
+                                </div>
+                                <div class="popular__profile">
+                                    <div class="popular__name">Jhon Smith</div>
+                                    <div class="popular__view">View Profile</div>
+                                </div>
+                            </div>
+                            <div class="popular__price">$100</div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="popular__item transform-b">
+                        <div class="popular__avatar">
+                            <img src="./img/courses/cours1.svg" alt="">
+                        </div>
+                        <div class="popular__padding">
+                            <div class="popular__designation">Modern Business|Best Online Courses</div>
+                        <div class="popular__desc">
+                            <div class="popular__lectures">30 Lectures</div>
+                            <div class="popular__learners">12k+Learners</div>
+                        </div>
+                        <hr>
+                        <div class="popular__bottom">
+                            <div class="popular__man">
+                                <div class="popular__photo">
+                                </div>
+                                <div class="popular__profile">
+                                    <div class="popular__name">Jhon Smith</div>
+                                    <div class="popular__view">View Profile</div>
+                                </div>
+                            </div>
+                            <div class="popular__price">$100</div>
+                        </div>
+                        </div>
+                    </div><div class="popular__item">
+                        <div class="popular__avatar">
+                            <img src="./img/courses/cours1.svg" alt="">
+                        </div>
+                        <div class="popular__padding">
+                            <div class="popular__designation">Modern Business|Best Online Courses</div>
+                        <div class="popular__desc">
+                            <div class="popular__lectures">30 Lectures</div>
+                            <div class="popular__learners">12k+Learners</div>
+                        </div>
+                        <hr>
+                        <div class="popular__bottom">
+                            <div class="popular__man">
+                                <div class="popular__photo">
+                                </div>
+                                <div class="popular__profile">
+                                    <div class="popular__name">Jhon Smith</div>
+                                    <div class="popular__view">View Profile</div>
+                                </div>
+                            </div>
+                            <div class="popular__price">$100</div>
+                        </div>
+                        </div>
+                    </div>
+                    
+
+            </div>
+            <div class="popular__btn "> 
+                <div class="btn">View All Courses</div>
                 </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="about-us">
+        <div class="about-us__title">Students say about us </div>
+        <div class="about-us__items">
+            <div class="about-us__item about-us__item-big">
+                <div class="about-us__photo">
+                    <img src="./img/courses/about.svg" alt="about">
+                </div>
+                <div class="about-us__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</div>
+                <div class="about-us__name">Jeiliya mathus</div>
+                <div class="about-us__job">Product Designer, Google</div>
+            </div>
+            <div class="about-us__right">
+                <div class="about-us__item about-us__item-small">
+                    <div class="about-us__photo">
+                    <img src="./img/courses/about.svg" alt="about">
+                    </div>
+                    <div class="about-us__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</div>
+                    <div class="about-us__name">Jeiliya mathus</div>
+                    <div class="about-us__job">Product Designer, Google</div>
+                </div> 
+                <div class="about-us__item about-us__item-small">
+                    <div class="about-us__photo">
+                    <img src="./img/courses/about.svg" alt="about">
+                    </div>
+                    <div class="about-us__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</div>
+                    <div class="about-us__name">Jeiliya mathus</div>
+                    <div class="about-us__job">Product Designer, Google</div>
+                </div>
+
 
             </div>
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer__title">Sign up & Enroll now,and Get Free Trial For 20Days</div>
+        <div class="footer__btns">
+            <div class="footer__btn-1 btn">Sign up</div>
+            <div class="footer__btn-2 btn">Start Free Trial</div>
+
+        </div>
+    </footer>
+</div>
+
+<script src="./script.js"></script>
 </body>
 </html>

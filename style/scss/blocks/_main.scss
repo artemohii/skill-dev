@@ -12,7 +12,9 @@
         @include desktop-small {
             flex-direction: column;
             gap: 54px;
+            margin-bottom: 30px;
         } 
+        
     }
 
     // .main__trusted-title
@@ -28,6 +30,14 @@
         display: flex;
         align-items: center;
         gap: 30px;
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include mobile {
+            display: grid;
+            grid-template-columns: 1fr ;
+        }
     }
 
     // .main__trusted-item1
@@ -54,6 +64,7 @@
     }
 }
 .item {
+    background: url(../img/company/udemy-logo.svg) no-repeat center;
     width: 190px;
     height: 60px;
     cursor: pointer;
@@ -74,14 +85,20 @@
     justify-content: space-between;
     gap: 50px;
     position: relative;
+    @include tablet {
+        flex-direction: column;
+    }
 
 &__bg-line {
     position: absolute;
     top: 0;
     height: 500px;
     width: 500px;
-    background: url(/HW/onlineSkillDev/img/line2.svg) center no-repeat;
+    background: url(../img/line2.svg) center no-repeat;
     background-size: cover;
+    @include mobile {
+        display: none;
+    }
 
 }
     // .steps__cards
@@ -93,6 +110,13 @@
         grid-template-columns: 1fr 1fr;
         gap: 30px;
         cursor: pointer;
+        @include mobile {
+            grid-template-columns: 1fr;
+            padding: 0;
+            .transform {
+                transform: translateY(0);
+            }
+        }
 
     }
 
@@ -139,9 +163,7 @@
     @include text ($font,600,28px,15px,$color-title);
     }
     
-    .transform {
-        transform: translateY(30px);
-    }
+    
     // .steps__info
 
     &__info {
@@ -184,47 +206,63 @@
         bottom: -35px;
         width: 58px;
         height: 80px;
-        background: url(/HW/onlineSkillDev/img/play2.png) center no-repeat;
+        background: url(../img/play2.png) center no-repeat;
     }
 }
 /* popular */
 .popular {
+    margin-bottom: 100px;
 
     // .popular__title
 
     &__title {
         @include text ($font,700,58px,74px,$color-title);
         margin-bottom: 133px;
+        cursor: default;
+        @include mobile {
+            font-size: 40px;
+            margin-bottom: 0;
+        }
     }
 
     // .popular__items
 
     &__items {
+        margin-bottom: 50px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
+        @include tablet {
+        grid-template-columns: 1fr 1fr;
+        .transform-b {
+            display: none;
+        }
+        }
+        @include mobile {
+            grid-template-columns: 1fr;
+
+            }
     }
 
     // .popular__item
 
     &__item {
+        cursor: pointer;
         background: #FFFFFF;
         border: 1px solid #F2EFEF;
         box-shadow: 0px 20px 100px rgba(87, 88, 89, 0.1);
         border-radius: 15px;
-        padding: 0 30px 30px 30px;
     }
 
     // .popular__avatar
     &__avatar {
-        margin-bottom: 30px;
 
     }
     &__avatar img{
         border-radius: 15px 15px 0 0;
-
-        
+        width: 100%;
     }
+    
 
     // .popular__designation
 
@@ -247,23 +285,49 @@
 
     &__lectures {
         @include text ($font,600,20px,15px,$color-gray);
+        padding-left: 37px;
+        position: relative;
+    }
+    &__lectures::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        background: url(../img/courses/play-rot.svg) no-repeat center;
+        width: 26px;
+        height: 36px;
     }
 
     // .popular__learners
 
     &__learners {
         @include text ($font,600,18px,22px,$color-gray);
+        position: relative;
+    }
+    &__learners::before{
+        content: "";
+        position: absolute;
+        left: -36px;
+        bottom: -2px;
+        background: url(../img/courses/student.svg) no-repeat center;
+        width: 26px;
+        height: 26px;
     }
 
     // .popular__man
 
     &__man {
         display: flex;
+        align-items: center;
+        gap: 20px;
     }
 
     // .popular__photo
 
     &__photo {
+        width: 68px;
+        height: 73px;
+        background: url(../img/courses/cours-man1.svg);
         
     }
     
@@ -276,11 +340,13 @@
     // .popular__name
 
     &__name {
+        @include text ($font,700,20px,21px,$color-title);
     }
 
     // .popular__view
 
     &__view {
+        @include text ($font,700,12px,21px,$color-green);
     }
     &__bottom {
         display: flex;
@@ -293,6 +359,12 @@
     &__price {
         @include text ($font,700,34px,15px,#4C68FF);
     }
+    &__btn {
+        display: flex;
+        align-items: center;   
+        justify-content: center;  
+        cursor: pointer;   
+    }
 }
 hr {
     margin: 21px auto;
@@ -300,4 +372,88 @@ hr {
     border: 0;
     border-bottom: 1px solid rgba(38, 142, 170, 0.5);
 
+}
+.popular__padding {
+    padding: 30px;
+}
+
+/* about us */
+.about-us {
+    margin-top: 100px ;
+    margin-bottom: 150px;
+    // .about-us__title
+
+    &__title {
+        text-align: center;
+        @include text ($font,600,58px,74px,#424232);
+        margin-bottom: 50px;
+    }
+
+    // .about-us__items
+
+    &__items {
+        display: flex;
+        gap: 78px;
+        @include tablet-small {
+            flex-direction: column;
+        }
+    }
+
+    // .about-us__item
+
+    &__item {
+
+        border: 1px solid rgba(231, 231, 231, 0.7);
+        box-shadow: 30px 30px 70px rgba(99, 98, 98, 0.06);
+        border-radius: 15px;
+        padding: 82px 51px;
+
+    }
+    &__item-big {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 1000px;
+    }
+    &__item-small {
+    }
+
+    // .about-us__photo
+
+    &__photo {
+        margin-bottom: 25px;
+    }
+
+    // .about-us__text
+
+    &__text {
+        @include text ($font,400,28px,40px,#8C8E90);
+        margin-bottom: 60px;
+        margin-bottom: 32px;
+        cursor: default;
+    }
+
+    // .about-us__name
+
+    &__name {
+        @include text ($font,600,30px,10px,$color-title);
+        margin-bottom: 32px;
+        cursor: default;
+
+    }
+
+    // .about-us__job
+
+    &__job {
+        cursor: default;
+
+    }
+
+    // .about-us__right
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
 }
